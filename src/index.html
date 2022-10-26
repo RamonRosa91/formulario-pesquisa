@@ -5,16 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Teste</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
-
+        <h1>Formulário Esportes</h1>
     </header>
     <main>
+        <form>
+            <fieldset>
+                <label for="nomesobrenome">Nome e sobrenome</label>
+                <input type="text" id="nomesobrenome" class="input-inicio" placeholder="João Silva">
+    
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="input-inicio" placeholder="seuemail@email.com">
+    
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" class="input-inicio" placeholder="(xx) xxxxx-xxxx">
+            </fieldset>
+            <br>
+            <fieldset>
+               
+                <legend class="titulos">Quais Esportes você assiste / pratica?</legend>
 
+                <label for="futebol"><input type="checkbox" id="futebol">Futebol</label>
+                <label for="volei"><input type="checkbox" id="volei">Volei</label>
+                <label for="atletismo"><input type="checkbox" id="atletismo">Atletismo</label>
+                <label for="basquete"><input type="checkbox" id="basquete">Basquete</label>
+                <label for="surf"><input type="checkbox" id="surf">Surf</label>
+                <label for="luta"><input type="checkbox" id="luta">Artes Marciais</label>
+                <label for="natacao"><input type="checkbox" id="natacao">Natação</label>
+                <label for="handebol"><input type="checkbox" id="handebol">Handebol</label>
+                <label for="tenis"><input type="checkbox" id="tenis">Tenis</label>
+                <label for="remo"><input type="checkbox" id="remo">Remo</label>
+                <label for="golf"><input type="checkbox" id="golf">Golf</label>
+                <label for="crossfit"><input type="checkbox" id="crossfit">Crossfit</label>
+                <label for="outro"><input type="checkbox" id="outro">Outros<input type="text" id="outro"></label>
+
+            </fieldset>
+            <br>
+            <fieldset>
+
+                <label>Qual meio de comunicação que mais acompanha seu esporte favorito?</label>
+                    <select id="comunicacao"> 
+                        <option selected disabled value="">Escolha uma Opção</option>
+                        <option>Televisão</option>
+                        <option>Internet</option>
+                        <option>Jornais</option>
+                        <option>Outros</option>
+                    </select>
+                 
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Em qual horario costuma praticar / acompanhar seus esportes?</legend>
+                    <label for="manha"><input type="radio" id="manha" name="horario" value="manha">Manhã</label>
+                    <label for="tarde"><input type="radio" id="tarde" name="horario" value="tarde">Tarde</label>
+                    <label for="noite"><input type="radio" id="noite" name="horario" value="noite">Noite</label>
+            </fieldset>
+        </form>
     </main>
-    <footer>
-        
-    </footer>
 </body>
 </html>
