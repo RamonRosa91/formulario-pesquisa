@@ -6,50 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Teste</title>
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+  
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
     <header>
-        <h1>Formulário Esportes</h1>
+        <h1 id="titulo">Formulário Esportes</h1>
     </header>
     <main>
         <form>
-            <fieldset>
-                <label for="nomesobrenome">Nome e sobrenome</label>
-                <input type="text" id="nomesobrenome" class="input-inicio" placeholder="João Silva">
-    
-                <label for="email">E-mail</label>
-                <input type="email" id="email" class="input-inicio" placeholder="seuemail@email.com">
-    
-                <label for="telefone">Telefone / WhatsApp</label>
-                <input type="tel" id="telefone" class="input-inicio" placeholder="(xx) xxxxx-xxxx">
+            <fieldset class="campos">
+
+                <div class="cabecalho">
+                    <label for="nomesobrenome"><strong>Nome e sobrenome</strong></label>
+                    <input type="text" id="nomesobrenome" class="input-inicio" placeholder="João Silva" required>
+        
+                    <label for="email"><strong>E-mail</strong></label>
+                    <input type="email" id="email" class="input-inicio" placeholder="seuemail@email.com" required>
+        
+                    <label for="telefone"><strong>Telefone / WhatsApp</strong></label>
+                    <input type="tel" id="telefone" class="input-inicio" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                
             </fieldset>
             <br>
-            <fieldset>
+            <fieldset class="campos" id="container">
                
-                <legend class="titulos">Quais Esportes você assiste / pratica?</legend>
-
-                <label for="futebol"><input type="checkbox" id="futebol">Futebol</label>
-                <label for="volei"><input type="checkbox" id="volei">Volei</label>
-                <label for="atletismo"><input type="checkbox" id="atletismo">Atletismo</label>
-                <label for="basquete"><input type="checkbox" id="basquete">Basquete</label>
-                <label for="surf"><input type="checkbox" id="surf">Surf</label>
-                <label for="luta"><input type="checkbox" id="luta">Artes Marciais</label>
-                <label for="natacao"><input type="checkbox" id="natacao">Natação</label>
-                <label for="handebol"><input type="checkbox" id="handebol">Handebol</label>
-                <label for="tenis"><input type="checkbox" id="tenis">Tenis</label>
-                <label for="remo"><input type="checkbox" id="remo">Remo</label>
-                <label for="golf"><input type="checkbox" id="golf">Golf</label>
-                <label for="crossfit"><input type="checkbox" id="crossfit">Crossfit</label>
-                <label for="outro"><input type="checkbox" id="outro">Outros<input type="text" id="outro"></label>
-
+                <legend class="titulos"><strong>Esportes você assiste / pratica?</strong></legend>
+                <div id="checkbox">
+                    <div class="checkbox-left">
+                        <label for="futebol"><input type="checkbox" id="futebol">Futebol</label>
+                        <label for="volei"><input type="checkbox" id="volei">Volei</label>
+                        <label for="atletismo"><input type="checkbox" id="atletismo">Atletismo</label>
+                        <label for="basquete"><input type="checkbox" id="basquete">Basquete</label>
+                        <label for="surf"><input type="checkbox" id="surf">Surf</label>
+                        <label for="luta"><input type="checkbox" id="luta">Artes Marciais</label>
+                    </div>
+                    <div class="checkbox-right">   
+                        <label for="natacao"><input type="checkbox" id="natacao">Natação</label>
+                        <label for="handebol"><input type="checkbox" id="handebol">Handebol</label>
+                        <label for="tenis"><input type="checkbox" id="tenis">Tenis</label>
+                        <label for="remo"><input type="checkbox" id="remo">Remo</label>
+                        <label for="golf"><input type="checkbox" id="golf">Golf</label>
+                        <label for="crossfit"><input type="checkbox" id="crossfit">Crossfit</label>
+                    </div>
+                </div>
+                <label for="outro" class="outro"><input type="checkbox" class="outro">Outros: <input type="text" id="outro"></label>
             </fieldset>
             <br>
-            <fieldset>
+            <fieldset class="campos">
 
-                <label>Qual meio de comunicação que mais acompanha seu esporte favorito?</label>
+                <label class="titulos"><strong>Qual meio de comunicação que mais acompanha seu esporte favorito?</strong></label>
                     <select id="comunicacao"> 
                         <option selected disabled value="">Escolha uma Opção</option>
                         <option>Televisão</option>
@@ -60,12 +68,27 @@
                  
             </fieldset>
             <br>
-            <fieldset>
-                <legend>Em qual horario costuma praticar / acompanhar seus esportes?</legend>
-                    <label for="manha"><input type="radio" id="manha" name="horario" value="manha">Manhã</label>
+            <fieldset class="campos">
+                <legend class="titulos"><strong>Em qual horario costuma praticar / acompanhar seus esportes?</strong></legend>
+
+                <div class="horario">
+                    <label for="manha"><input type="radio" id="manha" name="horario" value="manha" checked>Manhã</label>
                     <label for="tarde"><input type="radio" id="tarde" name="horario" value="tarde">Tarde</label>
                     <label for="noite"><input type="radio" id="noite" name="horario" value="noite">Noite</label>
+                </div>
+
             </fieldset>
+            <br>
+            <fieldset class="campos">
+                <label class="titulos"><strong>Mensagem Final</strong></label>
+                <textarea rows="6" style="width: 26em" id="mensagem" name="mensagem"></textarea>
+
+            </fieldset>
+            <div id="enviar-mensagem">
+
+                <button id="enviar">Enviar Formulário</button> 
+
+            </div>
         </form>
     </main>
 </body>
